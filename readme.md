@@ -5,19 +5,19 @@
 ## Overview
 
 The code is located in the folder:
-`AddKnit_Source`
+'AddKnit_Source'
 
-Run the file **`MAIN.m`** from MATLAB.
+Run the file **'MAIN.m'** from MATLAB.
 At the beginning, you will be prompted to select a mesh file.
 
 Mesh files are located in the folder:
-`AddKnit_Data`
+'AddKnit_Data'
 
 Test surfaces such as *hemisphere*, *pyramid*, *truncated pyramid*, etc., are located in the subfolder:
-`AddKnit_Data_TESTFLAECHEN`
+'AddKnit_Data_TESTFLAECHEN'
 
 External libraries and functions required for the computation are located in:
-`AddKnit_Extras`
+'AddKnit_Extras'
 
 If no file is selected, **MAIN** will terminate immediately.
 
@@ -64,25 +64,25 @@ This line either:
 **Algorithm Switching:**
 
 * At GUI start, Dijkstra’s algorithm is active
-* Press **`s`** → Switch to geodesic distance
-* Press **`b`** → Switch back to Dijkstra
+* Press **'s'** → Switch to geodesic distance
+* Press **'b'** → Switch back to Dijkstra
 * You can switch between algorithms at any time
 
 **Line Editing:**
 
 * **Double left-click:** Closes a line, creating a closed curve
-* **`n`** → Finish the construction of the current line
+* **'n'** → Finish the construction of the current line
   *(After this, the line cannot be changed. Lines change from red = active to blue = finalized)*
 
 **Special for Center Line:**
 
-* Before constructing the center line, press **`m`**
+* Before constructing the center line, press **'m'**
 * Construct points **from the start line to the end line**
 * The center line must be created last
 
 **Exit GUI:**
 
-* **`q`** → Exit GUI, embed defined points into the mesh, and update the mesh
+* **'q'** → Exit GUI, embed defined points into the mesh, and update the mesh
 
 ---
 
@@ -90,25 +90,25 @@ This line either:
 
 After the GUI is closed, the algorithm runs automatically.
 Results are stored in:
-`AddKnit_Results`
+'AddKnit_Results'
 
 The output consists of:
 
-* A `.jac` file
-* A `.bmp` file
+* A '.jac' file
+* A '.bmp' file
 
 **File naming format:**
 
-```
+'''
 [Mesh name]_[Creation date]_[Knitting technique].[jac or bmp]
-```
+'''
 
 **Example:**
 
-```
+'''
 Halbkugel_D20_03-Nov-2021_RR.bmp
 Halbkugel_D20_03-Nov-2021_RR.jac
-```
+'''
 
 ---
 
@@ -116,24 +116,24 @@ Halbkugel_D20_03-Nov-2021_RR.jac
 
 Currently available knitting techniques:
 
-* `RR` – right-right
-* `RL` – right-left
-* `HS` – half-tube
-* `IP` – Italian patent
-* `HS2` – half-tube variant
+* 'RR' – right-right
+* 'RL' – right-left
+* 'HS' – half-tube
+* 'IP' – Italian patent
+* 'HS2' – half-tube variant
 
-Changing the knitting technique must be done manually in **`MAIN.m`**.
+Changing the knitting technique must be done manually in **'MAIN.m'**.
 At the beginning of MAIN, stitch widths and heights are defined for all techniques (measured after washing and ironing).
 For more details, contact **Uwe Röder**.
 
 **Example:**
 
-```matlab
+'''matlab
 W = [0.96, 0.88, 0.84, 0.76, 10/6];
 H = [0.42, 0.3, 0.85, 0.44, 10/13];
 KNIT_STR = {'RR', 'HS', 'IP', 'RL', 'HS2'};
 KNIT = 5; % Change knitting technique here
-```
+'''
 
 ---
 
