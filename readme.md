@@ -5,19 +5,19 @@
 ## Overview
 
 The code is located in the folder:
-`AddKnit\Source`
+`AddKnit_Source`
 
 Run the file **`MAIN.m`** from MATLAB.
 At the beginning, you will be prompted to select a mesh file.
 
 Mesh files are located in the folder:
-`AddKnit\Data`
+`AddKnit_Data`
 
 Test surfaces such as *hemisphere*, *pyramid*, *truncated pyramid*, etc., are located in the subfolder:
-`AddKnit\Data\TESTFLAECHEN`
+`AddKnit_Data_TESTFLAECHEN`
 
 External libraries and functions required for the computation are located in:
-`AddKnit\Extras`
+`AddKnit_Extras`
 
 If no file is selected, **MAIN** will terminate immediately.
 
@@ -90,7 +90,7 @@ This line either:
 
 After the GUI is closed, the algorithm runs automatically.
 Results are stored in:
-`AddKnit\Results`
+`AddKnit_Results`
 
 The output consists of:
 
